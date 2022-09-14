@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - todo-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: kiculdms
+      MYSQL_DATABASE: todos
+
+volumes:
+  todo-mysql-data:
