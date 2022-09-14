@@ -1,7 +1,7 @@
 // create new todo
 const todoCreate = (req, res) => {
   req.todo.create(req.body)
-    .then(data => res.json(data))
+    .then(() => res.send())
     .catch(err => res.status(400).send({error: err.message}));
 };
 
